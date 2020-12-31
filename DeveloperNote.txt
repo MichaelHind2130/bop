@@ -1,0 +1,4 @@
+###
+New Army Type.
+Ability to change captured planets to toxic worlds through decision.
+Mutant Trait.
