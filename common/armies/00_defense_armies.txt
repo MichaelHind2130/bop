@@ -5,77 +5,27 @@
 
 # Defense Armies
 defense_army = {
-	defensive = yes
-	is_pop_spawned = yes
-	health = 1.25
-	damage = 1.50
-	morale = 1.25
-	collateral_damage = 0.0
-	war_exhaustion = 0.0 # No WE from defense armies
-	icon_frame = 1
-		
-	potential = {
-		from = {
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				is_sapient = no
-			}
-		}
-		owner = {
-			is_primitive = no
-			OR = {
-				NOT = { has_authority = auth_machine_intelligence }
-				has_valid_civic = civic_machine_assimilator
-			}
-		}
+	defensive = yes #This means the army cannot be transported off the world. Sectors will only build defense_army
+	time = 60 #How long it takes to build
+	#All these values are multiplied by the value inside the defines
+	health = 1.50
+	damage = 2.50
+	morale_damage = 2.50
+	morale = 2.50
+	icon_frame = 1.50
+	maintenance = 0.15
+	#robotic = yes #Armies with this dont loss morale
+	#has_species = no #THis army has no species
+	allow = { #If this is not true you cannot build it
 	}
-}
-
-# Robotic Armies
-robotic_defense_army = {
-	defensive = yes
-	is_pop_spawned = yes
-	damage = 1.00
-	health = 1.25
-	morale_damage = 1.00
-	collateral_damage = 0.0
-	war_exhaustion = 0.0 # No WE from defense armies
-	has_morale = no
-	icon_frame = 4
-	has_species = yes
-
-	potential = {
-		from = { 
-			has_trait = "trait_mechanical"
-		}
-		owner = {
-			NOT = { has_authority = auth_machine_intelligence }
-		}
+	potential = { #If this is not true it wont show up as a option to build.
 	}
-
-	allow = {
-		owner = { NOT = { has_policy_flag = robots_outlawed } }
+	cost = {
+		minerals = 30
 	}
-}
-
-### Machine Empire Armies
-machine_defense = {
-	defensive = yes
-	is_pop_spawned = yes
-	health = 1.10
-	damage = 1.10
-	has_morale = no
-	morale_damage = 1.00
-	collateral_damage = 0.0
-	war_exhaustion = 0.0 # No WE from defense armies
-	icon_frame = 12
-	has_species = yes
-
-	potential = {
-		owner = { has_authority = auth_machine_intelligence }
-		from = {
-			has_trait = "trait_machine_unit"
-		}
+	on_queued = { #When you queue this army this will happen. Used mostly to limit how many you can build
 	}
+	on_unqueued = {
+	}
+	prerequisites = { "tech_defense_army" } #the technology required.
 }

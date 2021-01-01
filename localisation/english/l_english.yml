@@ -1926,6 +1926,10 @@
  machine_occupation_army:0 "Drone Garrison"
  machine_occupation_army_plural:0 "Drone Garrisons"
  machine_occupation_army_desc:0 "$occupation_army_desc$"
+ #Bio############
+ mutant_army:0 "Mutant Army"
+ mutant_army_plural:0 "Mutant Armies"
+ mutant_army_desc:0 "Desc"
  assault_army:0 "Assault Army"
  assault_army_plural:0 "Assault Armies"
  assault_army_desc:0 "Assault armies come with their own transports and can invade other planets."

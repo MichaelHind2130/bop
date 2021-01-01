@@ -1,0 +1,16 @@
+﻿### Arthropoid 1
+### Created by Henrik Thyrwall
+
+ART1 = {
+	army_names = {
+		mutant_army = {
+			sequential_name = "%O% Foreign Pod"
+	}
+
+	defense_army = {
+		sequential_name = "%O% Defense Pod"
+	}
+		
+	assault_army = {
+		sequential_name = "%O% Assault Pod"
+	}
